@@ -1,0 +1,60 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dorgham",
+  "description": "DJ/Producer specializing in Melodic Techno and Indie Dance from Egypt",
+  "url": "https://dorgham.me",
+  "image": "https://dorgham.me/images/dorgham-profile.jpg",
+  "sameAs": [
+    "https://www.instagram.com/dorgham.music/",
+    "https://soundcloud.com/idorgham",
+    "https://youtube.com/@dorgham",
+    "https://www.facebook.com/iDorgham",
+    "https://twitter.com/dorgham",
+    "https://linkedin.com/in/dorgham"
+  ],
+  "jobTitle": "DJ/Producer",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hurghada",
+    "addressCountry": "Egypt"
+  },
+  "birthPlace": {
+    "@type": "Place",
+    "name": "Alexandria, Egypt"
+  },
+  "email": "bookings@dorgham.me",
+  "telephone": "+20-010-6000-3484",
+  "knowsAbout": [
+    "Music Production",
+    "Melodic Techno",
+    "Indie Dance",
+    "Electronic Music",
+    "DJ Performance",
+    "Electronic Music Production"
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "DJ/Producer",
+    "occupationLocation": {
+      "@type": "City",
+      "name": "Hurghada, Egypt"
+    },
+    "skills": [
+      "Music Production",
+      "DJ Performance",
+      "Electronic Music Production",
+      "Melodic Techno",
+      "Indie Dance",
+      "Sound Design"
+    ]
+  },
+  "award": [
+    "Egyptian Electronic Music Scene Contributor",
+    "COVID-19 Creative Journey Documented"
+  ],
+  "memberOf": {
+    "@type": "Organization",
+    "name": "Egyptian Electronic Music Community"
+  }
+}

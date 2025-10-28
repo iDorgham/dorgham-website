@@ -1,65 +1,171 @@
-import Image from "next/image";
+import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faSoundcloud, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import FadeIn from '@/components/animations/FadeIn';
+import ScrollReveal from '@/components/animations/ScrollReveal';
+import HoverScale from '@/components/animations/HoverScale';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen flex flex-col bg-gray-900">
+      {/* Top Navigation */}
+      <FadeIn direction="down" duration={0.8}>
+        <nav className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              {/* Logo */}
+              <HoverScale scale={1.05}>
+                <Link href="/" className="flex-shrink-0">
+                  <span className="text-2xl font-bold text-red-600">
+                    DORGHAM
+                  </span>
+                </Link>
+              </HoverScale>
+
+              {/* Navigation Links */}
+              <div className="hidden md:block">
+                <div className="ml-10 flex items-baseline space-x-8">
+                  <HoverScale scale={1.05}>
+                    <Link href="/bio" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                      Bio
+                    </Link>
+                  </HoverScale>
+                  <HoverScale scale={1.05}>
+                    <Link href="/music" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                      Music
+                    </Link>
+                  </HoverScale>
+                  <HoverScale scale={1.05}>
+                    <Link href="/press-kit" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                      Press Kit
+                    </Link>
+                  </HoverScale>
+                  <HoverScale scale={1.05}>
+                    <Link href="/book" className="bg-red-600 text-white px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-red-700 hover:shadow-lg">
+                      Book a Gig
+                    </Link>
+                  </HoverScale>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </FadeIn>
+
+      {/* Fullscreen Hero Section */}
+      <section className="flex-1 flex items-center">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="max-w-4xl">
+            {/* Logo/Name */}
+            <FadeIn delay={0.2} duration={0.8}>
+              <div className="mb-8">
+                <h1 className="text-6xl lg:text-7xl font-bold text-white mb-3">
+                  Dorgham
+                </h1>
+                <h2 className="text-xl lg:text-2xl font-light text-gray-300">
+                  DJ/Producer
+                </h2>
+              </div>
+            </FadeIn>
+
+          {/* Short Bio */}
+          <FadeIn delay={0.4} duration={0.8}>
+            <div className="mb-8 max-w-2xl">
+              <p className="text-base text-gray-300 leading-relaxed">
+                Egyptian DJ/Producer specializing in <strong className="text-white">Melodic Techno</strong> and <strong className="text-white">Indie Dance</strong>. 
+                Creating immersive electronic experiences that resonate with audiences worldwide.
+              </p>
+            </div>
+          </FadeIn>
+
+          {/* Social Media Links */}
+          <FadeIn delay={0.6} duration={0.8}>
+            <div className="mb-8">
+              <div className="flex space-x-6">
+                <HoverScale scale={1.1}>
+                  <a
+                    href="https://www.instagram.com/dorgham.music/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-300 hover:text-red-400 transition-colors duration-200"
+                    aria-label="Instagram"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} className="w-5 h-5 mr-2" />
+                    Instagram
+                  </a>
+                </HoverScale>
+                <HoverScale scale={1.1}>
+                  <a
+                    href="https://soundcloud.com/idorgham"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-300 hover:text-red-400 transition-colors duration-200"
+                    aria-label="SoundCloud"
+                  >
+                    <FontAwesomeIcon icon={faSoundcloud} className="w-5 h-5 mr-2" />
+                    SoundCloud
+                  </a>
+                </HoverScale>
+                <HoverScale scale={1.1}>
+                  <a
+                    href="https://www.facebook.com/iDorgham"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-300 hover:text-red-400 transition-colors duration-200"
+                    aria-label="Facebook"
+                  >
+                    <FontAwesomeIcon icon={faFacebook} className="w-5 h-5 mr-2" />
+                    Facebook
+                  </a>
+                </HoverScale>
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* CTA Buttons */}
+          <FadeIn delay={0.8} duration={0.8}>
+            <div className="mb-8 flex space-x-4">
+              <HoverScale scale={1.05}>
+                <Link href="/bio" className="bg-transparent text-red-400 border-2 border-red-400 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-red-400 hover:text-white">
+                  Read More
+                </Link>
+              </HoverScale>
+              <HoverScale scale={1.05}>
+                <Link href="/book" className="bg-red-600 text-white px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-red-700 hover:shadow-lg">
+                  Book a Gig
+                </Link>
+              </HoverScale>
+            </div>
+          </FadeIn>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
+
+      {/* Simple Footer */}
+      <ScrollReveal direction="up" delay={0.2}>
+        <footer className="py-8">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-gray-400 text-sm">
+                &copy; {new Date().getFullYear()} Dorgham. All rights reserved.
+              </p>
+              <div className="text-gray-400 text-sm mt-2 md:mt-0">
+                by{' '}
+                <HoverScale scale={1.05} as="span">
+                  <a 
+                    href="https://www.mediabubble.co" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-red-400 hover:text-red-300 transition-colors duration-200"
+                  >
+                    MediaBubble Agency
+                  </a>
+                </HoverScale>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </ScrollReveal>
     </div>
   );
 }

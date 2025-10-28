@@ -1,0 +1,94 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Dorgham",
+  "description": "Egyptian DJ/Producer specializing in Melodic Techno and Indie Dance",
+  "url": "https://dorgham.me",
+  "image": "https://dorgham.me/images/dorgham-group.jpg",
+  "sameAs": [
+    "https://www.instagram.com/dorgham.music/",
+    "https://soundcloud.com/idorgham",
+    "https://youtube.com/@dorgham",
+    "https://www.facebook.com/iDorgham",
+    "https://twitter.com/dorgham",
+    "https://linkedin.com/in/dorgham"
+  ],
+  "genre": [
+    "Melodic Techno",
+    "Indie Dance",
+    "Techno",
+    "Electronic Music"
+  ],
+  "location": {
+    "@type": "Place",
+    "name": "Hurghada, Egypt",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hurghada",
+      "addressCountry": "Egypt"
+    }
+  },
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Alexandria, Egypt"
+  },
+  "email": "bookings@dorgham.me",
+  "telephone": "+20-010-6000-3484",
+  "member": {
+    "@type": "Person",
+    "name": "Dorgham",
+    "jobTitle": "DJ/Producer"
+  },
+  "album": [
+    {
+      "@type": "MusicAlbum",
+      "name": "Alexandria Nights",
+      "description": "A journey through the coastal city of Alexandria, blending traditional Egyptian influences with contemporary electronic production",
+      "genre": "Melodic Techno",
+      "duration": "PT6M32S"
+    },
+    {
+      "@type": "MusicAlbum",
+      "name": "Hurghada Sunrise",
+      "description": "Inspired by the beautiful sunrises over the Red Sea in Hurghada",
+      "genre": "Indie Dance",
+      "duration": "PT5M45S"
+    },
+    {
+      "@type": "MusicAlbum",
+      "name": "Studio Sessions",
+      "description": "Created during late-night studio sessions",
+      "genre": "Melodic Techno",
+      "duration": "PT7M18S"
+    }
+  ],
+  "track": [
+    {
+      "@type": "MusicRecording",
+      "name": "Alexandria Nights",
+      "description": "A journey through the coastal city of Alexandria",
+      "genre": "Melodic Techno",
+      "duration": "PT6M32S",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Dorgham"
+      }
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Hurghada Sunrise",
+      "description": "Inspired by the beautiful sunrises over the Red Sea",
+      "genre": "Indie Dance",
+      "duration": "PT5M45S",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Dorgham"
+      }
+    }
+  ],
+  "award": [
+    "Egyptian Electronic Music Scene Contributor",
+    "COVID-19 Creative Journey Documented",
+    "Electronic Music Production Specialist"
+  ]
+}
