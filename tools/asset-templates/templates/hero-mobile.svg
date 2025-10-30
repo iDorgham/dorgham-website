@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="2208" viewBox="0 0 1242 2208">
+  <defs>
+    <linearGradient id="hm" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1242" height="2208" fill="url(#hm)"/>
+  <circle cx="200" cy="260" r="260" fill="#22d3ee" opacity="0.12"/>
+  <circle cx="1100" cy="1800" r="360" fill="#10b981" opacity="0.14"/>
+  <text x="80" y="520" font-family="Inter, Arial, sans-serif" font-size="72" fill="#e5e7eb" font-weight="800">Dorgham</text>
+  <text x="80" y="600" font-family="Inter, Arial, sans-serif" font-size="32" fill="#cbd5e1">Electronic music producer &amp; DJ</text>
+</svg>

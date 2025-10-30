@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g transform="translate(80,100)">
+    <rect x="0" y="0" width="200" height="200" rx="24" fill="#10b981" opacity="0.9"/>
+    <text x="240" y="72" font-family="Inter, Arial, sans-serif" font-size="56" fill="#e5e7eb" font-weight="800">Dorgham</text>
+    <text x="240" y="132" font-family="Inter, Arial, sans-serif" font-size="32" fill="#9ca3af">Electronic Music Producer &amp; DJ</text>
+    <text x="0" y="260" font-family="Inter, Arial, sans-serif" font-size="28" fill="#cbd5e1">OG Headline Here</text>
+    <text x="0" y="308" font-family="Inter, Arial, sans-serif" font-size="20" fill="#94a3b8">Optional subheading or URL</text>
+  </g>
+</svg>

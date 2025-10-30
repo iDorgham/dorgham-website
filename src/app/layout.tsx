@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import ConditionalLayout from "@/components/ConditionalLayout";
 
 const poppins = Poppins({
@@ -51,6 +52,7 @@ export default function RootLayout({
         <ConditionalLayout>
           {children}
         </ConditionalLayout>
+        <SpeedInsights />
       </body>
     </html>
   );
