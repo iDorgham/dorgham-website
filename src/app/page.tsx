@@ -6,10 +6,11 @@ import ScrollReveal from '@/components/animations/ScrollReveal';
 import HoverScale from '@/components/animations/HoverScale';
 import HeroBackground from '@/components/HeroBackground';
 import HomeNavigation from '@/components/HomeNavigation';
+import GlowingOverlay from '@/components/GlowingOverlay';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-black/95 overflow-hidden">
       {/* Top Navigation */}
       <HomeNavigation />
 
@@ -18,9 +19,12 @@ export default function Home() {
         {/* Background Image */}
         <HeroBackground />
         
+        {/* Glowing Overlay Animation */}
+        <GlowingOverlay />
+        
         {/* Content */}
         <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full pb-8 md:pb-0">
-          <div className="max-w-4xl scale-75 md:scale-90 lg:scale-100 origin-bottom-left md:origin-top-left">
+          <div className="max-w-4xl scale-[0.8] origin-bottom-left md:origin-top-left">
             {/* Logo/Name */}
             <FadeIn delay={0.2} duration={0.8}>
               <div className="mb-4 md:mb-8">
@@ -110,12 +114,12 @@ export default function Home() {
       <ScrollReveal direction="up" delay={0.2}>
         <footer className="py-8 bg-black/95">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 text-sm">
+            <div className="flex flex-row justify-between items-center gap-2">
+              <p className="text-gray-400 text-xs md:text-sm scale-[0.7] md:scale-100 origin-left md:origin-center">
                 &copy; {new Date().getFullYear()} Dorgham. All rights reserved.
               </p>
-              <div className="text-gray-400 text-sm mt-2 md:mt-0">
-                by{' '}
+              <div className="text-gray-400 text-xs md:text-sm scale-[0.7] md:scale-100 origin-right md:origin-center">
+                <span className="hidden md:inline">by </span>
                 <HoverScale scale={1.05} as="span">
                   <a 
                     href="https://www.mediabubble.co" 

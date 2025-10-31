@@ -13,9 +13,9 @@ export default function HomeNavigation() {
       <nav className="bg-black/95 backdrop-blur-sm border-b border-red-600">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo */}
+            {/* Logo - Hidden on mobile */}
             <HoverScale scale={1.05}>
-              <Link href="/" className="flex-shrink-0">
+              <Link href="/" className="flex-shrink-0 hidden md:block">
                 <span className="text-2xl font-bold text-white">
                   Dorgham
                 </span>
@@ -48,8 +48,8 @@ export default function HomeNavigation() {
               </div>
             </div>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden">
+            {/* Mobile menu button - Left aligned */}
+            <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-red-600 hover:bg-red-900/20 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-600 transition-colors duration-200"

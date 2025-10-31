@@ -8,16 +8,29 @@ export default function TermsOfServicePage() {
   return (
     <div className="min-h-screen">
       {/* Terms of Service Hero */}
-      <section className="bg-gray-900 text-white py-20">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl lg:text-6xl font-bold mb-6">Terms of Service</h1>
-          <p className="text-xl lg:text-2xl">Terms and Conditions for Using Our Services</p>
+      <section className="relative py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/images/generated/hero-desktop.jpg"
+            alt=""
+            className="w-full h-full object-cover object-center"
+            aria-hidden="true"
+          />
+          {/* Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/10"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center scale-[0.8] origin-center">
+          <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-white">Terms of Service</h1>
+          <p className="text-xl lg:text-2xl text-gray-300">Terms and Conditions for Using Our Services</p>
         </div>
       </section>
 
       {/* Terms of Service Content */}
-      <section className="py-20 bg-gray-800">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-black/95">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 scale-[0.8] origin-top">
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-300 mb-8">
               <strong>Last Updated:</strong> October 24, 2024

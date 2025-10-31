@@ -8,8 +8,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-black/95 text-white">
+      {/* Full Footer - Hidden on mobile, shown on desktop */}
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 scale-[0.8] origin-top hidden md:block">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
@@ -127,23 +128,45 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
+        {/* Bottom Bar - Desktop: with border, Mobile: simple like home page */}
+        <div className="border-t border-gray-700 mt-8 pt-8 hidden md:block">
+          <div className="flex flex-row justify-between items-center gap-2">
+            <p className="text-gray-400 text-xs md:text-sm scale-[0.7] md:scale-100 origin-left md:origin-center">
               &copy; {currentYear} Dorgham. All rights reserved.
             </p>
-            <p className="text-gray-400 text-sm mt-2 md:mt-0">
-              by{' '}
+            <div className="text-gray-400 text-xs md:text-sm scale-[0.7] md:scale-100 origin-right md:origin-center">
+              <span className="hidden md:inline">by </span>
               <a 
                 href="https://www.mediabubble.co" 
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-red-400 hover:text-red-300 transition-colors duration-200"
               >
                 MediaBubble Agency
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Mobile Footer - Simple like home page */}
+      <div className="md:hidden py-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-row justify-between items-center gap-2">
+            <p className="text-gray-400 text-xs md:text-sm scale-[0.7] md:scale-100 origin-left md:origin-center">
+              &copy; {currentYear} Dorgham. All rights reserved.
             </p>
+            <div className="text-gray-400 text-xs md:text-sm scale-[0.7] md:scale-100 origin-right md:origin-center">
+              <span className="hidden md:inline">by </span>
+              <a 
+                href="https://www.mediabubble.co" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-400 hover:text-red-300 transition-colors duration-200"
+              >
+                MediaBubble Agency
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-gray-900 shadow-lg sticky top-0 z-50">
+    <nav className="bg-black/95 shadow-lg sticky top-0 z-50 backdrop-blur-sm border-b border-red-600">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -99,7 +99,7 @@ const Navigation = () => {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900 border-t border-gray-700">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/95 border-t border-red-600">
             {navItems.map((item) => (
               <Link
                 key={item.href}

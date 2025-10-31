@@ -38,18 +38,31 @@ export default function BookPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-black/95">
       {/* Book Hero */}
-      <section className="bg-gray-800 text-white py-16">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4">Book a Gig</h1>
+      <section className="relative py-16 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/images/generated/hero-desktop.jpg"
+            alt=""
+            className="w-full h-full object-cover object-center"
+            aria-hidden="true"
+          />
+          {/* Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/10"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center scale-[0.8] origin-center">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-white">Book a Gig</h1>
           <p className="text-lg text-gray-300">Let's Create Something Amazing Together</p>
         </div>
       </section>
 
       {/* Booking Form */}
-      <section className="py-16 bg-gray-900">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-black/95">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 scale-[0.8] origin-top">
           <div className="bg-white rounded-xl shadow-2xl p-8 md:p-12">
             
             {/* Form Status Messages */}
