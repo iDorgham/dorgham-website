@@ -12,7 +12,7 @@ export default function HomeNavigation() {
     <FadeIn direction="down" duration={0.8}>
       <nav className="bg-black/95 backdrop-blur-sm border-b border-red-600">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-start md:justify-between items-center h-16">
             {/* Logo - Hidden on mobile */}
             <HoverScale scale={1.05}>
               <Link href="/" className="flex-shrink-0 hidden md:block">
@@ -99,11 +99,20 @@ export default function HomeNavigation() {
               <div className="px-2 pt-2 pb-3 space-y-1 border-t border-red-600">
                 <HoverScale scale={1.02}>
                   <Link 
+                    href="/"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-red-600 bg-red-900/20 transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Home
+                  </Link>
+                </HoverScale>
+                <HoverScale scale={1.02}>
+                  <Link 
                     href="/bio" 
                     className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-red-900/20 transition-colors duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Bio
+                    Biography
                   </Link>
                 </HoverScale>
                 <HoverScale scale={1.02}>

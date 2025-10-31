@@ -19,7 +19,7 @@ export default function Bio() {
         </div>
         
         {/* Content */}
-        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center scale-[0.8] origin-center">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 md:scale-[0.8] origin-center">
           <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-white">Biography</h1>
           <p className="text-xl lg:text-2xl text-gray-300">The Story of Dorgham</p>
         </div>
@@ -31,7 +31,7 @@ export default function Bio() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Bio Content */}
             <div className="lg:col-span-2 space-y-8 text-center md:text-left">
-              <div className="space-y-6 text-lg text-gray-300 leading-relaxed scale-[0.8] origin-center md:origin-top-left">
+              <div className="space-y-6 text-lg text-gray-300 leading-relaxed scale-100 md:scale-[0.8] origin-center md:origin-top-left">
                 <p>
                   <strong className="text-white">Dorgham</strong> is an Egyptian DJ/Producer specializing in <strong className="text-red-400">Melodic Techno</strong> and <strong className="text-red-400">Indie Dance</strong>. Based in <strong className="text-white">Hurghada, Egypt</strong>, he brings a unique perspective to electronic music production, creating immersive audio experiences that resonate with audiences worldwide.
                 </p>
@@ -50,7 +50,7 @@ export default function Bio() {
               </div>
 
               {/* Call to Action */}
-              <div className="mt-12 scale-[0.8] origin-center md:origin-top-left">
+              <div className="mt-12 scale-100 md:scale-[0.8] origin-center md:origin-top-left">
                 <Link href="/book" className="bg-red-600 text-white px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-200 hover:bg-red-700 hover:shadow-lg inline-block">
                   Book Dorgham for Your Event
                 </Link>
@@ -60,7 +60,7 @@ export default function Bio() {
             {/* Sidebar Information */}
             <div className="space-y-8">
               {/* Influences */}
-              <div className="bg-gray-800 rounded-lg p-6 hidden lg:block scale-[0.8] origin-top">
+              <div className="bg-gray-800 rounded-lg p-6 hidden lg:block scale-100 md:scale-[0.8] origin-top">
                 <h3 className="text-xl font-bold text-red-400 mb-6">Musical Influences</h3>
                 <div className="space-y-3">
                   <div className="text-gray-300">
@@ -81,7 +81,7 @@ export default function Bio() {
 
       {/* Social Media Links */}
       <section className="py-8 md:py-20 bg-black/95">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center scale-[0.8] origin-center">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 md:scale-[0.8] origin-center">
           <h2 className="text-4xl font-bold text-white mb-12">
             Connect With Dorgham
           </h2>

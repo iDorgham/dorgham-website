@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="bg-black/95 text-white">
       {/* Full Footer - Hidden on mobile, shown on desktop */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 scale-[0.8] origin-top hidden md:block">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 scale-100 md:scale-[0.8] origin-top hidden md:block">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">

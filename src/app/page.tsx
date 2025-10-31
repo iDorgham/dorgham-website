@@ -24,14 +24,14 @@ export default function Home() {
         
         {/* Content */}
         <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full pb-8 md:pb-0">
-          <div className="max-w-4xl scale-[0.8] origin-bottom-left md:origin-top-left">
+              <div className="max-w-4xl scale-100 md:scale-[0.8] origin-bottom-left md:origin-top-left">
             {/* Logo/Name */}
             <FadeIn delay={0.2} duration={0.8}>
               <div className="mb-4 md:mb-8">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2 md:mb-3">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-2 md:mb-3">
                   Dorgham
                 </h1>
-                <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-light text-gray-300">
+                <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-gray-300">
                   DJ/Producer
                 </h2>
               </div>
@@ -40,7 +40,7 @@ export default function Home() {
           {/* Short Bio */}
           <FadeIn delay={0.4} duration={0.8}>
             <div className="mb-4 md:mb-8 max-w-2xl">
-              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-gray-300 leading-relaxed">
                 Egyptian DJ/Producer specializing in <strong className="text-white">Melodic Techno</strong> and <strong className="text-white">Indie Dance</strong>. 
                 Creating immersive electronic experiences that resonate with audiences worldwide.
               </p>
@@ -49,17 +49,17 @@ export default function Home() {
 
           {/* Social Media Links */}
           <FadeIn delay={0.6} duration={0.8}>
-            <div className="mb-4 md:mb-8">
-              <div className="flex flex-wrap gap-4 sm:gap-6">
+            <div className="mb-8 md:mb-12">
+              <div className="flex flex-wrap gap-2 sm:gap-4 md:gap-6">
                 <HoverScale scale={1.1}>
                   <a
                     href="https://www.instagram.com/dorgham.music/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-gray-300 hover:text-red-400 transition-colors duration-200 text-sm sm:text-base"
+                    className="flex items-center text-gray-300 hover:text-red-400 transition-colors duration-200 text-xs sm:text-sm md:text-base"
                     aria-label="Instagram"
                   >
-                    <FontAwesomeIcon icon={faInstagram} className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                    <FontAwesomeIcon icon={faInstagram} className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-1.5 sm:mr-2" />
                     Instagram
                   </a>
                 </HoverScale>
@@ -68,10 +68,10 @@ export default function Home() {
                     href="https://soundcloud.com/idorgham"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-gray-300 hover:text-red-400 transition-colors duration-200 text-sm sm:text-base"
+                    className="flex items-center text-gray-300 hover:text-red-400 transition-colors duration-200 text-xs sm:text-sm md:text-base"
                     aria-label="SoundCloud"
                   >
-                    <FontAwesomeIcon icon={faSoundcloud} className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                    <FontAwesomeIcon icon={faSoundcloud} className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-1.5 sm:mr-2" />
                     SoundCloud
                   </a>
                 </HoverScale>
@@ -80,10 +80,10 @@ export default function Home() {
                     href="https://www.facebook.com/iDorgham"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-gray-300 hover:text-red-400 transition-colors duration-200 text-sm sm:text-base"
+                    className="flex items-center text-gray-300 hover:text-red-400 transition-colors duration-200 text-xs sm:text-sm md:text-base"
                     aria-label="Facebook"
                   >
-                    <FontAwesomeIcon icon={faFacebook} className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                    <FontAwesomeIcon icon={faFacebook} className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-1.5 sm:mr-2" />
                     Facebook
                   </a>
                 </HoverScale>

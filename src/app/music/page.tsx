@@ -32,7 +32,7 @@ export default function MusicPage() {
           </div>
           
           {/* Content */}
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center scale-[0.8] origin-center">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 md:scale-[0.8] origin-center">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-white">Music Portfolio</h1>
             <p className="text-xl lg:text-2xl text-gray-300">Melodic Techno & Indie Dance Productions</p>
           </div>
@@ -42,7 +42,7 @@ export default function MusicPage() {
       {/* SoundCloud Mixes */}
       <ScrollReveal direction="up" delay={0.2}>
         <section className="py-20 bg-black/95">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 scale-[0.8] origin-top">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 scale-100 md:scale-[0.8] origin-top">
             <h2 className="text-4xl font-bold text-white mb-12 text-center">Latest Mixes</h2>
             <StaggerContainer staggerDelay={0.15}>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -69,7 +69,7 @@ export default function MusicPage() {
       {/* Call to Action */}
       <ScrollReveal direction="up" delay={0.4}>
         <section className="py-20 bg-black/95 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center scale-[0.8] origin-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 md:scale-[0.8] origin-center">
             <h2 className="text-4xl font-bold mb-6">Book Dorgham for Your Event</h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
               Ready to bring melodic techno and indie dance to your venue?

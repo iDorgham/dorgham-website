@@ -29,7 +29,7 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-6 scale-[0.8] origin-center">
+    <div className="flex flex-wrap justify-center gap-6 scale-100 md:scale-[0.8] origin-center">
       {socialLinks.map((link) => (
         <a
           key={link.name}

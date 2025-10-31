@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
         </div>
         
         {/* Content */}
-        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center scale-[0.8] origin-center">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 md:scale-[0.8] origin-center">
           <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-white">Privacy Policy</h1>
           <p className="text-xl lg:text-2xl text-gray-300">How We Protect Your Information</p>
         </div>
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
 
       {/* Privacy Policy Content */}
       <section className="py-20 bg-black/95">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 scale-[0.8] origin-top">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 scale-100 md:scale-[0.8] origin-top">
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-300 mb-8">
               <strong>Last Updated:</strong> October 24, 2024

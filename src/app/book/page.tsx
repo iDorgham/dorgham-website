@@ -54,7 +54,7 @@ export default function BookPage() {
         </div>
         
         {/* Content */}
-        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center scale-[0.8] origin-center">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 md:scale-[0.8] origin-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-white">Book a Gig</h1>
           <p className="text-lg text-gray-300">Let's Create Something Amazing Together</p>
         </div>
@@ -62,7 +62,7 @@ export default function BookPage() {
 
       {/* Booking Form */}
       <section className="py-16 bg-black/95">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 scale-[0.8] origin-top">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 scale-100 md:scale-[0.8] origin-top">
           <div className="bg-white rounded-xl shadow-2xl p-8 md:p-12">
             
             {/* Form Status Messages */}

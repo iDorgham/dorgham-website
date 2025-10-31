@@ -24,7 +24,7 @@ export default function PressKitPage() {
         </div>
         
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center scale-[0.8] origin-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 md:scale-[0.8] origin-center">
           <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-white">Press Kit</h1>
           <p className="text-xl lg:text-2xl text-gray-300">Media Downloads & Press Materials</p>
         </div>
@@ -32,7 +32,7 @@ export default function PressKitPage() {
 
       {/* Download Section */}
       <section className="py-20 bg-black/95">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 scale-[0.8] origin-top">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 scale-100 md:scale-[0.8] origin-top">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Download Materials</h2>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
