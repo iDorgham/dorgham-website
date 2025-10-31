@@ -140,7 +140,7 @@ const Footer = () => {
                 href="https://www.mediabubble.co" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-950 hover:text-red-900 transition-colors duration-200"
+                className="text-red-400 hover:text-red-300 transition-colors duration-200"
               >
                 MediaBubble Agency
               </a>
@@ -162,7 +162,7 @@ const Footer = () => {
                 href="https://www.mediabubble.co" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-950 hover:text-red-900 transition-colors duration-200"
+                className="text-red-400 hover:text-red-300 transition-colors duration-200"
               >
                 MediaBubble Agency
               </a>
