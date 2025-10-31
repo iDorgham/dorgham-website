@@ -114,7 +114,7 @@ export default function Home() {
 
       {/* Simple Footer */}
       <ScrollReveal direction="up" delay={0.2}>
-            <footer className="py-8 bg-black/95">
+            <footer className="py-8 bg-black/95" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 8px)' }}>
               <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-row justify-between items-center gap-2">
               <p className="text-gray-400 text-xs md:text-sm scale-[0.7] md:scale-100 origin-left md:origin-center">

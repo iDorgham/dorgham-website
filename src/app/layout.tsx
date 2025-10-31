@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   keywords: "Dorgham, Egyptian DJ, melodic techno, indie dance, Hurghada, Alexandria",
   authors: [{ name: "Dorgham" }],
   robots: "index, follow",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    viewportFit: "cover",
+  },
   openGraph: {
     title: "Dorgham - DJ/Producer",
     description: "DJ/Producer from Egypt. Melodic techno and indie dance.",
