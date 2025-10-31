@@ -7,7 +7,7 @@ import HoverScale from '@/components/animations/HoverScale';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900">
+    <div className="min-h-screen flex flex-col bg-gray-900 overflow-hidden">
       {/* Top Navigation */}
       <FadeIn direction="down" duration={0.8}>
         <nav className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700">
@@ -53,8 +53,21 @@ export default function Home() {
       </FadeIn>
 
       {/* Fullscreen Hero Section */}
-      <section className="flex-1 flex items-center">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <section className="flex-1 flex items-center relative">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/images/generated/hero-background.jpg"
+            alt=""
+            className="w-full h-full object-cover"
+            aria-hidden="true"
+          />
+          {/* Subtle Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-4xl">
             {/* Logo/Name */}
             <FadeIn delay={0.2} duration={0.8}>
