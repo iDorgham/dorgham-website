@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from "next/link";
+import { Calendar } from 'lucide-react';
 import FadeIn from '@/components/animations/FadeIn';
 import HoverScale from '@/components/animations/HoverScale';
 
@@ -10,8 +11,8 @@ export default function HomeNavigation() {
 
   return (
     <FadeIn direction="down" duration={0.8}>
-      <nav className="bg-black/95 backdrop-blur-sm border-b border-red-600">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="bg-transparent sticky top-0 z-50 border-b border-red-600 shadow-lg backdrop-blur-sm">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-start md:justify-between items-center h-16">
             {/* Logo - Hidden on mobile */}
             <HoverScale scale={1.05}>
@@ -41,8 +42,9 @@ export default function HomeNavigation() {
                   </Link>
                 </HoverScale>
                 <HoverScale scale={1.05}>
-                  <Link href="/book" className="bg-red-600 text-white px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-red-700 hover:shadow-lg">
+                  <Link href="/book" className="bg-red-600 text-white px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-red-700 hover:shadow-lg flex items-center justify-center gap-2">
                     Book a Gig
+                    <Calendar className="w-4 h-4" strokeWidth={2} />
                   </Link>
                 </HoverScale>
               </div>
@@ -96,7 +98,7 @@ export default function HomeNavigation() {
           {/* Mobile Navigation Menu */}
           {isMenuOpen && (
             <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 border-t border-red-600">
+              <div className="px-2 pt-2 pb-3 space-y-1 bg-transparent border-t border-red-600">
                 <HoverScale scale={1.02}>
                   <Link 
                     href="/"
@@ -136,10 +138,11 @@ export default function HomeNavigation() {
                 <HoverScale scale={1.02}>
                   <Link 
                     href="/book" 
-                    className="block px-3 py-2 rounded-md text-base font-medium text-center bg-red-600 text-white hover:bg-red-700 transition-colors duration-200"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-center bg-red-600 text-white hover:bg-red-700 transition-colors duration-200 flex items-center justify-center gap-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Book a Gig
+                    <Calendar className="w-4 h-4" strokeWidth={2} />
                   </Link>
                 </HoverScale>
               </div>

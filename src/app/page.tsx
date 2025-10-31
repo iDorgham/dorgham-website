@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faSoundcloud, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { Calendar } from 'lucide-react';
 import FadeIn from '@/components/animations/FadeIn';
 import ScrollReveal from '@/components/animations/ScrollReveal';
 import HoverScale from '@/components/animations/HoverScale';
@@ -23,12 +24,12 @@ export default function Home() {
         <GlowingOverlay />
         
         {/* Content */}
-        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full pb-8 md:pb-0">
-              <div className="max-w-4xl scale-100 md:scale-[0.8] origin-bottom-left md:origin-top-left">
+            <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-8 md:pb-0">
+                  <div className="max-w-3xl scale-100 origin-bottom-left md:origin-top-left">
             {/* Logo/Name */}
             <FadeIn delay={0.2} duration={0.8}>
               <div className="mb-4 md:mb-8">
-                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-2 md:mb-3">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-2 md:mb-3">
                   Dorgham
                 </h1>
                 <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-gray-300">
@@ -93,15 +94,16 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <FadeIn delay={0.8} duration={0.8}>
-            <div className="mb-0 md:mb-8 flex flex-row gap-2 sm:gap-4">
+            <div className="mb-0 md:mb-8 flex flex-row gap-2 sm:gap-4 items-center">
               <HoverScale scale={1.05}>
-                <Link href="/bio" className="bg-transparent text-red-400 border-2 border-red-400 px-3 py-2 sm:px-6 sm:py-3 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 hover:bg-red-400 hover:text-white text-center whitespace-nowrap">
+                <Link href="/bio" className="bg-transparent text-red-400 border-2 border-red-400 px-3 py-2 sm:px-6 sm:py-3 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 hover:bg-red-400 hover:text-white text-center whitespace-nowrap flex items-center justify-center h-full">
                   Read More
                 </Link>
               </HoverScale>
               <HoverScale scale={1.05}>
-                <Link href="/book" className="bg-red-600 text-white px-3 py-2 sm:px-6 sm:py-3 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 hover:bg-red-700 hover:shadow-lg text-center whitespace-nowrap">
+                <Link href="/book" className="bg-red-600 text-white px-3 py-2 sm:px-6 sm:py-3 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 hover:bg-red-700 hover:shadow-lg text-center whitespace-nowrap flex items-center justify-center gap-2 h-full">
                   Book a Gig
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={2} />
                 </Link>
               </HoverScale>
             </div>
@@ -112,8 +114,8 @@ export default function Home() {
 
       {/* Simple Footer */}
       <ScrollReveal direction="up" delay={0.2}>
-        <footer className="py-8 bg-black/95">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <footer className="py-8 bg-black/95">
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-row justify-between items-center gap-2">
               <p className="text-gray-400 text-xs md:text-sm scale-[0.7] md:scale-100 origin-left md:origin-center">
                 &copy; {new Date().getFullYear()} Dorgham. All rights reserved.
@@ -125,7 +127,7 @@ export default function Home() {
                     href="https://www.mediabubble.co" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-red-400 hover:text-red-300 transition-colors duration-200"
+                    className="text-red-950 hover:text-red-900 transition-colors duration-200"
                   >
                     MediaBubble Agency
                   </a>

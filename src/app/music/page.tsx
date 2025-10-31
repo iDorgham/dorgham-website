@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Calendar } from 'lucide-react';
 import SoundCloudEmbed from "@/components/SoundCloudEmbed";
 import { soundcloudTracks } from "@/config/soundcloud";
 import FadeIn from '@/components/animations/FadeIn';
@@ -32,7 +33,7 @@ export default function MusicPage() {
           </div>
           
           {/* Content */}
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 md:scale-[0.8] origin-center">
+              <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 origin-center">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-white">Music Portfolio</h1>
             <p className="text-xl lg:text-2xl text-gray-300">Melodic Techno & Indie Dance Productions</p>
           </div>
@@ -41,17 +42,17 @@ export default function MusicPage() {
 
       {/* SoundCloud Mixes */}
       <ScrollReveal direction="up" delay={0.2}>
-        <section className="py-20 bg-black/95">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 scale-100 md:scale-[0.8] origin-top">
+        <section className="py-20 bg-[#1a0000]">
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 scale-100 origin-top">
             <h2 className="text-4xl font-bold text-white mb-12 text-center">Latest Mixes</h2>
             <StaggerContainer staggerDelay={0.15}>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {soundcloudTracks.map((track, index) => (
                   <StaggerItem key={track.id}>
                     <HoverScale scale={1.02}>
-                      <div className="bg-gray-700 rounded-lg p-6 hover:bg-gray-600 transition-colors duration-300">
-                        <h3 className="text-xl font-bold text-white mb-4">{track.title}</h3>
-                        <div className="aspect-square">
+                      <div className="bg-red-950 rounded-lg p-6 hover:bg-red-900 transition-colors duration-300">
+                        <h3 className="text-xl font-bold text-white mb-4 text-center">{track.title}</h3>
+                        <div className="aspect-[4/3] mt-[25px]">
                           <LazyWrapper>
                             <SoundCloudEmbed track={track} className="w-full h-full" />
                           </LazyWrapper>
@@ -68,15 +69,16 @@ export default function MusicPage() {
 
       {/* Call to Action */}
       <ScrollReveal direction="up" delay={0.4}>
-        <section className="py-20 bg-black/95 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 md:scale-[0.8] origin-center">
-            <h2 className="text-4xl font-bold mb-6">Book Dorgham for Your Event</h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
+        <section className="py-20 bg-red-600 text-white">
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 origin-center">
+                <h2 className="text-4xl font-bold mb-6 text-red-950">Book Dorgham for Your Event</h2>
+                <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
               Ready to bring melodic techno and indie dance to your venue?
             </p>
             <HoverScale scale={1.05}>
-              <Link href="/book" className="btn-secondary">
+              <Link href="/book" className="bg-white text-red-600 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-red-950 hover:text-white flex items-center justify-center gap-2">
                 Book a Gig
+                <Calendar className="w-5 h-5" strokeWidth={2} />
               </Link>
             </HoverScale>
           </div>

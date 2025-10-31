@@ -87,18 +87,18 @@ export default function GlowingOverlay() {
           }
         }
         
-        /* Desktop repositioning - horizontal distribution */
+        /* Desktop repositioning - horizontal distribution, shifted 600px left */
         @media (min-width: 1024px) {
           .spotlight-desktop[data-desktop-left="25%"] {
-            left: 25% !important;
+            left: calc(25% - 600px) !important;
             top: 50% !important;
           }
           .spotlight-desktop[data-desktop-left="50%"] {
-            left: 50% !important;
+            left: calc(50% - 600px) !important;
             top: 50% !important;
           }
           .spotlight-desktop[data-desktop-left="75%"] {
-            left: 75% !important;
+            left: calc(75% - 600px) !important;
             top: 50% !important;
           }
         }

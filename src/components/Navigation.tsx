@@ -1,12 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Calendar } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { href: '/bio', label: 'Bio' },
@@ -22,12 +33,16 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-black/95 shadow-lg sticky top-0 z-50 backdrop-blur-sm border-b border-red-600">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className={`sticky top-0 z-50 border-b border-red-600 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-black/95 backdrop-blur-md shadow-xl' 
+        : 'bg-transparent backdrop-blur-sm shadow-lg'
+    }`}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-start md:justify-between items-center h-16">
           {/* Logo - Hidden on mobile */}
           <Link href="/" className="flex-shrink-0 hidden md:block">
-            <span className="text-2xl font-bold text-red-600">
+            <span className="text-2xl font-bold text-white">
               Dorgham
             </span>
           </Link>
@@ -43,9 +58,10 @@ const Navigation = () => {
                     isActive(item.href)
                       ? 'text-red-600 bg-red-900/20'
                       : 'text-gray-300 hover:text-red-600 hover:bg-red-900/20'
-                  } ${item.label === 'Book a Gig' ? 'btn-primary' : ''}`}
+                  } ${item.label === 'Book a Gig' ? 'btn-primary flex items-center justify-center gap-2' : ''}`}
                 >
                   {item.label}
+                  {item.label === 'Book a Gig' && <Calendar className="w-4 h-4" strokeWidth={2} />}
                 </Link>
               ))}
             </div>
@@ -100,7 +116,7 @@ const Navigation = () => {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/95 border-t border-red-600">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-transparent border-t border-red-600">
             <Link
               href="/"
               className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
@@ -120,10 +136,11 @@ const Navigation = () => {
                   isActive(item.href)
                     ? 'text-red-600 bg-red-900/20'
                     : 'text-gray-300 hover:text-red-600 hover:bg-red-900/20'
-                } ${item.label === 'Book a Gig' ? 'btn-primary text-center' : ''}`}
+                } ${item.label === 'Book a Gig' ? 'btn-primary text-center flex items-center justify-center gap-2' : ''}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.href === '/bio' ? 'Biography' : item.label}
+                {item.label === 'Book a Gig' && <Calendar className="w-4 h-4" strokeWidth={2} />}
               </Link>
             ))}
           </div>

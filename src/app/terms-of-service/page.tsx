@@ -1,3 +1,6 @@
+import FadeIn from '@/components/animations/FadeIn';
+import ScrollReveal from '@/components/animations/ScrollReveal';
+
 export const metadata = {
   title: "Terms of Service - Dorgham | Website Terms & Conditions",
   description: "Terms of service for Dorgham's website. Read our terms and conditions for using our services.",
@@ -8,29 +11,32 @@ export default function TermsOfServicePage() {
   return (
     <div className="min-h-screen">
       {/* Terms of Service Hero */}
-      <section className="relative py-20 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/assets/images/generated/hero-desktop.jpg"
-            alt=""
-            className="w-full h-full object-cover object-center"
-            aria-hidden="true"
-          />
-          {/* Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/10"></div>
-        </div>
-        
-        {/* Content */}
-        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 md:scale-[0.8] origin-center">
-          <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-white">Terms of Service</h1>
-          <p className="text-xl lg:text-2xl text-gray-300">Terms and Conditions for Using Our Services</p>
-        </div>
-      </section>
+      <FadeIn direction="up" duration={0.8}>
+        <section className="relative py-20 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="/assets/images/generated/hero-desktop.jpg"
+              alt=""
+              className="w-full h-full object-cover object-center"
+              aria-hidden="true"
+            />
+            {/* Overlay for Text Readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/10"></div>
+          </div>
+          
+          {/* Content */}
+              <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center scale-100 origin-center">
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-white">Terms of Service</h1>
+            <p className="text-xl lg:text-2xl text-gray-300">Terms and Conditions for Using Our Services</p>
+          </div>
+        </section>
+      </FadeIn>
 
       {/* Terms of Service Content */}
-      <section className="py-20 bg-black/95">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 scale-100 md:scale-[0.8] origin-top">
+      <ScrollReveal direction="up" delay={0.2}>
+        <section className="py-20 bg-black/95">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 scale-100 origin-top">
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-300 mb-8">
               <strong>Last Updated:</strong> October 24, 2024
@@ -161,6 +167,7 @@ export default function TermsOfServicePage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
     </div>
   );
 }
