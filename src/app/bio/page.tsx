@@ -13,7 +13,7 @@ export default function Bio() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img
-              src="/assets/images/generated/hero-desktop.jpg"
+              src="/assets/images/pages-background-2.jpg"
               alt=""
               className="w-full h-full object-cover object-center"
               aria-hidden="true"
