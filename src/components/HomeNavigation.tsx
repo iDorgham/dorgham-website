@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from "next/link";
-import { Calendar } from 'lucide-react';
+import { Calendar, Home as HomeIcon, User, Music2, FileText } from 'lucide-react';
 import FadeIn from '@/components/animations/FadeIn';
 import HoverScale from '@/components/animations/HoverScale';
 
@@ -102,36 +102,40 @@ export default function HomeNavigation() {
                 <HoverScale scale={1.02}>
                   <Link 
                     href="/"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-red-600 bg-red-900/20 transition-colors duration-200"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-red-600 bg-red-900/20 transition-colors duration-200 flex items-center gap-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
+                    <HomeIcon className="w-4 h-4" strokeWidth={2} />
                     Home
                   </Link>
                 </HoverScale>
                 <HoverScale scale={1.02}>
                   <Link 
                     href="/bio" 
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-red-900/20 transition-colors duration-200"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-red-900/20 transition-colors duration-200 flex items-center gap-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
+                    <User className="w-4 h-4" strokeWidth={2} />
                     Biography
                   </Link>
                 </HoverScale>
                 <HoverScale scale={1.02}>
                   <Link 
                     href="/music" 
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-red-900/20 transition-colors duration-200"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-red-900/20 transition-colors duration-200 flex items-center gap-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
+                    <Music2 className="w-4 h-4" strokeWidth={2} />
                     Music
                   </Link>
                 </HoverScale>
                 <HoverScale scale={1.02}>
                   <Link 
                     href="/press-kit" 
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-red-900/20 transition-colors duration-200"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-red-900/20 transition-colors duration-200 flex items-center gap-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
+                    <FileText className="w-4 h-4" strokeWidth={2} />
                     Press Kit
                   </Link>
                 </HoverScale>

@@ -11,12 +11,12 @@ import GlowingOverlay from '@/components/GlowingOverlay';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-black/95 overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-black/95">
       {/* Top Navigation */}
       <HomeNavigation />
 
       {/* Fullscreen Hero Section */}
-      <section className="flex-1 flex items-end md:items-center relative">
+      <section className="flex-1 flex items-end md:items-center relative md:min-h-screen">
         {/* Background Image */}
         <HeroBackground />
         
@@ -94,7 +94,7 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <FadeIn delay={0.8} duration={0.8}>
-            <div className="mb-0 md:mb-8 flex flex-row gap-2 sm:gap-4 items-center">
+            <div className="mb-8 md:mb-8 flex flex-row gap-2 sm:gap-4 items-center">
               <HoverScale scale={1.05}>
                 <Link href="/bio" className="bg-transparent text-red-400 border-2 border-red-400 px-3 py-2 sm:px-6 sm:py-3 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 hover:bg-red-400 hover:text-white text-center whitespace-nowrap flex items-center justify-center h-full">
                   Read More
@@ -114,7 +114,7 @@ export default function Home() {
 
       {/* Simple Footer */}
       <ScrollReveal direction="up" delay={0.2}>
-            <footer className="py-8 bg-black/95" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 8px)' }}>
+            <footer className="py-8 bg-black/95 pb-16 md:pb-8" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 4rem)' }}>
               <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-row justify-between items-center gap-2">
               <p className="text-gray-400 text-xs md:text-sm scale-[0.7] md:scale-100 origin-left md:origin-center">

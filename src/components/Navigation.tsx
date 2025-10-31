@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Calendar } from 'lucide-react';
+import { Calendar, Home as HomeIcon, User, Music2, FileText } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -123,9 +123,10 @@ const Navigation = () => {
                 pathname === '/'
                   ? 'text-red-600 bg-red-900/20'
                   : 'text-gray-300 hover:text-red-600 hover:bg-red-900/20'
-              }`}
+              } flex items-center gap-2`}
               onClick={() => setIsMenuOpen(false)}
             >
+              <HomeIcon className="w-4 h-4" strokeWidth={2} />
               Home
             </Link>
             {navItems.map((item) => (
@@ -136,11 +137,14 @@ const Navigation = () => {
                   isActive(item.href)
                     ? 'text-red-600 bg-red-900/20'
                     : 'text-gray-300 hover:text-red-600 hover:bg-red-900/20'
-                } ${item.label === 'Book a Gig' ? 'btn-primary text-center flex items-center justify-center gap-2' : ''}`}
+                } ${item.label === 'Book a Gig' ? 'btn-primary text-center flex items-center justify-center gap-2' : 'flex items-center gap-2'}`}
                 onClick={() => setIsMenuOpen(false)}
               >
+                {item.href === '/bio' && <User className="w-4 h-4" strokeWidth={2} />}
+                {item.href === '/music' && <Music2 className="w-4 h-4" strokeWidth={2} />}
+                {item.href === '/press-kit' && <FileText className="w-4 h-4" strokeWidth={2} />}
+                {item.href === '/book' && <Calendar className="w-4 h-4" strokeWidth={2} />}
                 {item.href === '/bio' ? 'Biography' : item.label}
-                {item.label === 'Book a Gig' && <Calendar className="w-4 h-4" strokeWidth={2} />}
               </Link>
             ))}
           </div>

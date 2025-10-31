@@ -22,7 +22,10 @@ const CookieBanner = () => {
   useEffect(() => {
     const cookieConsent = localStorage.getItem('cookieConsent');
     if (!cookieConsent) {
-      setIsVisible(true);
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 10000); // show after 10 seconds
+      return () => clearTimeout(timer);
     }
   }, []);
 
